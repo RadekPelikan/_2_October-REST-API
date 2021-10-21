@@ -35,44 +35,60 @@ app.get("/comment/:id", (req, res) => {
 });
 // 4
 app.post("/user", (req, res) => {
-  const { payload } = req.body;
+  const {name, age} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      name,
+      age
+    },
   });
 });
 // 5
 app.post("/article", (req, res) => {
-  const { payload } = req.body;
+  const {title, category} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      title,
+      category
+    },
   });
 });
 // 6
 app.post("/category", (req, res) => {
-  const { payload } = req.body;
+  const {name} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      name
+    },
   });
 });
 // 7
 app.put("/user", (req, res) => {
-  const { payload } = req.body;
+  const {name, age} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      name,
+      age
+    },
   });
 });
 // 8
 app.patch("/user", (req, res) => {
-  const { payload } = req.body;
+  const {id, name} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      id,
+      name
+    },
   });
 });
 // 9
 app.delete("/article", (req, res) => {
-  const { payload } = req.body;
+  const {id} = req.body;
   res.status(200).send({
-    payload,
+    payload: {
+      id,
+    },
   });
 });
 
